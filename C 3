@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(void)
+{
+	int na, nb;
+	printf("请输入两个正整数："); scanf_s("%d %d", &na, &nb);
+	if (na > nb) {
+		printf("Invalid");
+	}
+	else {
+		printf("fahr  celsius\n");
+		printf("%d  %.1f\n", na, 5.0 * (double(na) - 32) / 9.0);
+		printf("%d  %.1f\n", nb, 5.0 * (double(nb) - 32) / 9.0);
+	}
+	return(0);
+}
