@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(void)
+{
+	int x;
+	double cost;/*该用户应支付的电费*/
+	printf("请输入某月用户的用电量："); scanf_s("%d", &x);
+	if (x < 0)
+		printf("Invalid Value!");
+	else if (x <= 50) {
+		cost = 0.53 * x;
+		printf("cost=%.1f", cost);
+	}
+	else
+	{
+		cost = 0.53 * 50 + 0.58 * (x-50.0);/*整型和浮点型混合运算，最后是浮点型*/
+			printf("cost=%.2f", cost);
+	}
+	return(0);
+}
