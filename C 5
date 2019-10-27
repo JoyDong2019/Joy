@@ -1,0 +1,20 @@
+求奇数分之一序列前N项之和
+
+#include <stdio.h>
+int main(void)
+{
+	int n;
+	int i = 1;
+	int count = 0;
+	double sum = 0;
+	double t;
+	printf("请输入一个正整数："); scanf_s("%d", &n);
+	do {
+		t = 1.0 / i;
+		sum = sum + t;
+		i = i + 2;
+		count++;
+	} while (count < n);
+	printf("%f", sum);
+	return(0);
+}
