@@ -1,0 +1,20 @@
+求平方根序列前N项和 
+#include <stdio.h>
+#include<math.h>
+int main(void)
+{
+	int N;
+	int count = 0;
+	double t;
+	int i=1;
+	double sum = 0;
+	printf("请输入一个正整数："); scanf_s("%d", &N);
+	do {
+		t = sqrt(i);
+		sum = sum + t;
+		i++;
+		count++;
+	} while (count < N);
+	printf("%.2f", sum);
+	return(0);
+}
