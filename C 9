@@ -1,0 +1,25 @@
+求平方与倒数序列的部分和
+#include <stdio.h>
+int main(void)
+{
+	int m, n;
+	double sum = 0;
+	int x;
+	double t;
+	printf("请输入两个正整数：\n"); 
+	printf("整数m："); scanf_s("%d", &m);
+	printf("整数n："); scanf_s("%d", &n);
+	if (m > n)
+		printf("请输入两个数，其中m小于n");
+	else
+	{
+		do{
+			x = m * m;
+			t = 1.0 / m;
+			sum = sum + x + t;
+			m++;
+		} while (m <= n);
+	}
+	printf("%.6f", sum);
+	return(0);
+}
