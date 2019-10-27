@@ -1,0 +1,25 @@
+求交错序列前n项之和
+#include <stdio.h>
+int main(void)
+{
+	int N;
+	int count = 1;
+	int m = 1;
+	int n = 1;
+	double t;
+	double sum = 0;
+	printf("请输入一个正整数：");
+	scanf_s("%d", &N);
+	do {
+		if (count % 2 == 1)
+			t = 1.0*n / m;
+		else
+			t = -1.0*n / m;
+		sum = sum + t;
+		n = n + 1;
+		m = m + 2;
+		count++;
+	} while (count <= N);
+	printf("%.3f", sum);
+	return(0);
+}
