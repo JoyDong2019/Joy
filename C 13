@@ -1,0 +1,16 @@
+计算符号函数的值
+#include<stdio.h>
+int main(void)
+{
+	int x;
+	int f;
+	printf("请输入一个整数："); scanf_s("%d", &x);
+	if (x < 0)
+		f = -1;
+	else if (x == 0)
+		f = 0;
+	else
+		f = 1;
+	printf("sign(%d)=%d", x, f);
+	return(0);
+}
