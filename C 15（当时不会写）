@@ -1,0 +1,21 @@
+输入10个字符，统计其中英文字母、空格或回车、数字字符和其他字符的个数。
+#include<stdio.h>
+int main(void)
+{
+	char c;
+	int letter = 0, space = 0, digit = 0, other = 0;
+	printf("i请输入10个字符：\n");
+	while ((c = getchar()) != '\n') /*读取当前字符,如不为回车符则进行统计*/
+	{
+		if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+			letter++;
+		else if (c == ' ')
+			space++;
+		else if (c >= '0' && c <= '9')
+			digit++;
+		else
+			other++;
+	}
+	printf(" letter=%d,space=%d,digit=%d,other=%d\n", letter, space, digit, other);
+	return(0);
+}
