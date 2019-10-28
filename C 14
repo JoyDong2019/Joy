@@ -1,0 +1,23 @@
+输入学生人数 计算平均分 及格人数
+#include<stdio.h>
+int main(void)
+{
+	int N;
+	int c;
+	int i = 1;
+	int sum = 0;
+	int count = 0;
+	double average;
+	printf("请输入学生人数：");
+	scanf_s("%d", &N);
+	for(i=1;i<=N;i++){
+		printf("请输入学生成绩：");
+		scanf_s("%d", &c);
+		sum = sum + c;
+		if (c > 60)
+			count++;
+	}
+	average = 1.0 * sum / N;
+	printf("%d %f %d", sum, average,count);
+	return(0);
+}
