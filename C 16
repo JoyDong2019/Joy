@@ -1,0 +1,19 @@
+输出21世纪中截止某个年份以来的所有闰年年份。
+#include<stdio.h>
+int main(void)
+{
+	int year;
+	int i = 2000;
+	printf("请输入21世纪的某一截至年份：");
+	scanf_s("%d", &year);
+	if (year <= 2000 || year>2099)
+		printf("Invalid year!");
+	else
+	{
+		do {
+			i = i + 4;
+			printf("%d\n", i);
+		} while (i < year);
+	}
+	return(0);
+}
