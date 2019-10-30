@@ -1,0 +1,25 @@
+比较三个数的大小并从小到大排列
+#include<stdio.h>
+int main(void)
+{
+	int na, nb, nc;
+	int m;
+	printf("请输入三个数："); scanf_s("%d %d %d", &na, &nb, &nc);
+	if (na > nb) {
+		m = na;
+		na = nb;
+		nb = m;
+	}
+	if (na > nc) {
+		m = na;
+		na = nc;
+		nc = m;
+	}
+	if (nb > nc) {
+		m = nb;
+		nb = nc;
+		nc = m;
+	}
+	printf("%d %d %d", na, nb, nc);
+	return(0);
+}
