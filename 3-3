@@ -1,0 +1,30 @@
+不知道错哪了 我觉得自己挺对的
+#include<stdio.h>
+int main(void)
+{
+ double l;
+ int m;
+ int x;
+ double y;
+ int p;
+ printf("请输入行驶里程与等待时间："); scanf_s("%lf %d", &l, &m);
+ x = m / 5 * 2;
+ if (l < 3)
+ {
+  y = 10.0 + x;
+  printf("y");
+ }
+ else if (l > 3 && l <= 10)
+ {
+  y = 10.0 + x + (l - 3.0) * 2;
+  p = (int)(y + 0.5);
+  printf("%d", p);
+ }
+ else if(l>10)
+ {
+  y = 24.0 + x + (1 - 10.0) * 3;
+  p = (int)(y + 0.5);
+  printf("%d", p);
+ }
+ return(0);
+}
