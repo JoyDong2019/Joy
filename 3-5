@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
+	double a, b, c, d, e, f;
+	double AB, BC, AC, ab, bc, ac;
+	double P = 1 / 2;
+	printf("请输入6个数字：");
+	scanf_s("%lf %lf %lf %lf %lf %lf ", &a, &b, &c, &d, &e, &f);
+	ab = (a - c) * (a - c) + (b - d) * (b - d);
+	bc = (c - e) * (c - e) + (d - f) * (d - f);
+	ac = (a - e) * (a - e) + (b - f) * (b - f);
+	AB = sqrt(ab);
+	BC = sqrt(bc);
+	AC = sqrt(ac);
+	if ((AB < BC + AC) && (BC < AB + AC) && (AC < AB + BC)) {
+		double l = AB + BC + AC;
+		double s = sqrt(P * (P - AB) * (P - BC) * (P - AC));
+		printf("L=%.2f,A=%.2f", l, s);
+	}
+	else
+		printf("impossible");
+	return(0);
+}
