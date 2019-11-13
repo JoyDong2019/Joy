@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main(void)
+{
+	int n;
+	int c;
+	int i = 1;
+	int na=0, nb=0, nc=0, nd=0, ne=0;
+	printf("请输入学生人数："); scanf_s("%d", &n);
+	printf("请输入学生的成绩：");
+	for (i = 1; i < n; i++) {
+		scanf_s("%d", &c);
+		if (c >= 90)
+			na++;
+		if (c >= 80 && c < 90)
+			nb++;
+		if (c >= 70 && c < 80)
+			nc++;
+		if (c >= 60 && c < 70)
+			nd++;
+		if (c < 60)
+			ne++;
+	}
+	printf("%d %d %d %d %d", na, nb, nc, nd, ne);
+	return(0);
+}
