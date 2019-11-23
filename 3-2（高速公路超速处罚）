@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(void)
+{
+	int c;
+	int n;
+	double x;
+	double y;
+	printf("请输入车速和限速：");
+	scanf_s("%d %d", &c, &n);
+	x = (double)c / n;
+	y = (x - 1.0)*100;
+	printf("%.1f\n", x);
+	if (1 < x &&x< 1.1)
+		printf("OK");
+	else if (1.1 <= x && x < 1.5) 
+		printf("Exceed%.0f%%,Ticket 200", y);
+	else
+		printf("Exceed%.0f%%,License Revoked",y);
+	return 0;
+}
