@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main(void)
+{
+	double l;
+	int t;
+	int m;
+	int y;
+	printf("请输入行驶里程和等待时间：");
+	scanf_s("%lf ", &l);
+	scanf_s("%d", &t);
+	m = 2 * (t / 5);
+	if (l <= 3) {
+		y = 10 + m;
+		printf("%d", y);
+	}
+	else if (l > 3 && l < 10) {
+		y = (int)(l - 3.0) * 2 + 10 + m;
+		printf("%d", y);
+	}
+	else if (l > 10) {
+		y = (int)(l - 10) * 3 + 10 + 16 + m;
+		printf("%d", y);
+	}
+	return 0;
+}
