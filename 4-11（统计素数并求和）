@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int M;
+	int N;
+	int sum = 0;
+	int i;
+	int num;
+	int count = 0;
+	int l=0;
+	scanf_s("%d %d", &M, &N);
+	for (num = M; num <= N; num++) {
+		for (i = 2; i <= num; i++) {
+			if (num % i != 0)
+				l++;
+		}
+		if (l == num - 2) {/*如何将判断出的素数输出*/
+			sum = sum + num;
+			count++;
+		}
+		l = 0;
+	}
+	printf("%d %d", count, sum);
+	return 0;
+}
