@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n;
+	int sum = 0;
+	int i = 1;
+	for (;; i++) {/*输入一系列正整数，一般都要采用for循环遍历*/
+		scanf_s("%d", &n);
+		if (n % 2 != 0)
+		{
+			sum = sum + n;
+		}
+			
+		if ((n == 0 || n < 0) && (n % 2 != 0)) {
+			sum = sum - n;
+			break;/*这边并不是在输入时碰到负数直接跳出，而是程序在后台处理时跳出，注意这个逻辑顺序*/
+		}
+		if ((n == 0 || n < 0) && (n % 2 == 0))
+			break;
+	}
+	printf("%d", sum);
+	return 0;
+}
