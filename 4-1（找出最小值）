@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(void) 
+{
+	int n;
+	int num;
+	int minnum=0;
+	int i;
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++) {
+		scanf_s("%d", &num);
+		if (i == 0)  /*用if语句的目的*/
+			minnum = num; /*确保minnum 有值*/
+		else
+			minnum = (minnum > num ? num : minnum);
+	}
+	printf("minnum=%d\n", minnum);
+	return 0;
+}
