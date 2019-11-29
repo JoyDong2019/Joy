@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	double x;
+	double m=1.0;
+	int i = 2;
+	int k = 1;
+	double sum = 1;
+	scanf_s("%lf", &x);	
+	for (; (abs(m) > 0.00001); i++)
+	{
+		m = 1.0*x / k;
+		sum = sum + m;
+		k = k * i;
+		x = x * x;
+	}
+	printf("%.4f", sum);
+	return 0;
+}
