@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int N;
+	int count = 0;
+	int i = 1;
+	int j = 2;
+	int x;
+	double m;
+	double sum = 0;
+	scanf_s("%d", &N);
+	do {
+		m = 1.0 * j / i;
+		sum = sum + m;
+		x = j;  /*注意分子是前一项的分母，可是分母已经改变，故引入一个变量*/
+		j = i + j;
+		i = x;
+		count++;
+	} while (count < N);
+	printf("%.2f", sum);
+	return 0;
+}
