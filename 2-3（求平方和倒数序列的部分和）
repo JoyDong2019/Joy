@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
+	int n,m;
+	int i;
+	double sum = 0;
+	scanf_s("%d %d", &m, &n);
+	for (i = m; i <= n; i++) {
+		sum = sum + pow(i, 2) + 1.0 / i;
+	}
+	printf("sum=%.6f", sum);
+	return 0;
+}
